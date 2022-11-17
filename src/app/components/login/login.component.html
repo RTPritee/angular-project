@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="container" align = "center">
+    User login
+  </div>  
+  <form (submit)="submit()">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name" placeholder="Your name.." >
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="Email" placeholder="Your mail address..">
+
+    <label for="password">Password</label>
+    <input type ="password" id ="password" name="Password" >
+    
+    <input type="Submit"  (click)="formSubmit()">
+    <!-- <button (click)="formSubmit()"></button> -->
+
+  </form>
+  <button (click)="formSubmit()">test</button>
+</div>
+
