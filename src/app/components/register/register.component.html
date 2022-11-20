@@ -1,1 +1,38 @@
-<p>register works!</p>
+<div class="container">  
+    <div class="card-header">  
+    <h1 style = "text-align: center;">{{topic}}</h1>
+    </div>  
+    <div class="card-body">  
+    <form>  
+    <div>  
+    <label for="FirstName">First Name*</label>  
+    <div>  
+    <input type="text" name="FirstName" required >  
+ 
+    </div>  
+    </div>  
+    <div>  
+    <label for="LastName">Last Name</label>  
+    <div>  
+    <input type="text"  required >  
+
+    </div>  
+    </div>  
+    <div>  
+    <label for="Mobile">Mobile</label>  
+    <div>  
+    <input type="text" name="Mobile" required>  
+
+    </div>  
+    </div>  
+    <div>  
+    <label for="Location">Location</label>  
+    <div>  
+    <input type="location" name="location" > 
+    </div>  
+    </div>  
+    <button (click)="registerSubmit()" type="submit">Submit</button>  
+    <button type="reset">Reset</button>  
+    </form>  
+    </div>  
+    </div> 
