@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router,NavigationExtras } from '@angular/router';
+import { FormControl } from '@angular/forms';
 @Component({
  
   selector: 'app-register',
@@ -8,13 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   public topic = "Register Here";
-  constructor() { }
+  constructor(
+    public router: Router
+  ){}
 
   ngOnInit(): void {
 
   }
  registerSubmit(){
-  console.log("clicked");
+  //console.log("clicked");
+  this.router.navigate(['/dashboard']);
  } 
+ reset(){
+  this.router.navigate(['/register']);
+ }
 
 }

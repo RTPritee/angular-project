@@ -5,13 +5,13 @@
   </div>  
   <form (submit)="submit()">
     <label for="name">Name</label>
-    <input type="text" id="name" name="Name" placeholder="Your name.." >
+    <input type="text" id="name" name="Name" placeholder="Your name.." required>
 
     <label for="email">Email</label>
-    <input type="text" id="email" name="Email" placeholder="Your mail address..">
+    <input type="text" id="email" name="Email" placeholder="Your mail address.." required>
 
     <label for="password">Password</label>
-    <input type ="password" id ="password" name="Password" >
+    <input type ="password" id ="password" name="Password" required >
     
     <input type="Submit"  (click)="formSubmit()">
     <!-- <button (click)="formSubmit()"></button> -->

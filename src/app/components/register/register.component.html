@@ -3,36 +3,49 @@
     <h1 style = "text-align: center;">{{topic}}</h1>
     </div>  
     <div class="card-body">  
-    <form>  
+    <form class ="form">  
     <div>  
-    <label for="FirstName">First Name*</label>  
+    <label for="FirstName">First Name 
+        <label style="color: red;">*</label>
+    </label>  
     <div>  
     <input type="text" name="FirstName" required >  
- 
     </div>  
     </div>  
     <div>  
-    <label for="LastName">Last Name</label>  
+    <label for="LastName">Last Name</label>  <label style="color: red;">*</label> 
     <div>  
-    <input type="text"  required >  
+    <input type="text" name = "LastName" required >  
 
     </div>  
     </div>  
     <div>  
-    <label for="Mobile">Mobile</label>  
+    <label for="Mobile">Mobile</label>   <label style="color: red;">*</label> 
     <div>  
     <input type="text" name="Mobile" required>  
 
     </div>  
     </div>  
     <div>  
-    <label for="Location">Location</label>  
+        <label for="Location">Location</label>  
+        <div>  
+        <input type="location" name="location" > 
+        </div>  
+    </div>  
     <div>  
-    <input type="location" name="location" > 
+        <label for="email">Email</label>    <label style="color: red;">*</label>
+        <div>  
+        <input type="text" name="email" required> 
+        </div>  
+    </div>  
+    <div>  
+    <label for="password">Password</label>  <label style="color: red;">*</label> 
+    <div>  
+    <input type="password" name="password" pattern="(?=^.{6,12}$)(?=.*\d)(?=.*[a-z])[a-zA-Z0-9 _-]*$" required> 
     </div>  
     </div>  
-    <button (click)="registerSubmit()" type="submit">Submit</button>  
-    <button type="reset">Reset</button>  
-    </form>  
+    <button  type="submit">Submit</button>  
+    </form> 
+    <button (click)="reset()" type="reset">Reset</button>   
     </div>  
     </div> 
