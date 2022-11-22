@@ -35,7 +35,7 @@
     <div>  
         <label for="email">Email</label>    <label style="color: red;">*</label>
         <div>  
-        <input type="text" name="email" required> 
+        <input type="text" name="email" required type ="email"> 
         </div>  
     </div>  
     <div>  
@@ -45,6 +45,8 @@
     </div>  
     </div>  
     <button  type="submit">Submit</button>  
+    <span>Already have an account? 
+        <a routerLink="/login">Login </a></span>
     </form> 
     <button (click)="reset()" type="reset">Reset</button>   
     </div>  

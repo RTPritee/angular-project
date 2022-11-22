@@ -4,18 +4,19 @@
     User login
   </div>  
   <form (submit)="submit()">
-    <label for="name">Name</label>
+   <!-- <label for="name">Name</label>
     <input type="text" id="name" name="Name" placeholder="Your name.." required>
-
+    -->
     <label for="email">Email</label>
     <input type="text" id="email" name="Email" placeholder="Your mail address.." required>
 
     <label for="password">Password</label>
-    <input type ="password" id ="password" name="Password" required >
+    <input type ="password" id ="password" name="Password" placeholder="*********" required >
     
     <input type="Submit"  (click)="formSubmit()">
     <!-- <button (click)="formSubmit()"></button> -->
-
+    <span>Don't have any account? 
+      <a routerLink="/register"> Sign Up </a></span>
   </form>
   <button (click)="formSubmit()">test</button>
 </div>

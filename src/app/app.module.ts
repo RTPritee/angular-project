@@ -8,6 +8,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
+import { AuthComponent } from './components/authentication/auth/auth.component';
+import { GurdComponent } from './components/authentication/gurd/gurd.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    AuthComponent,
+    GurdComponent
   ],
   imports: [
     BrowserModule,

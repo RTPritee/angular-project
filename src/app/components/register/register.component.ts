@@ -9,6 +9,11 @@ import { FormControl } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   public topic = "Register Here";
+  FirstName = new FormControl('');
+  LastName = new FormControl('');
+  Mobile = new FormControl('');
+  email = new FormControl('');
+  password =new FormControl('');
   constructor(
     public router: Router
   ){}
@@ -18,10 +23,16 @@ export class RegisterComponent implements OnInit {
   }
  registerSubmit(){
   //console.log("clicked");
+  this.FirstName.setValue('');
+  this.LastName.setValue('');
+  this.Mobile.setValue('');
+  this.email.setValue('');
+  this.password.setValue('');
   this.router.navigate(['/dashboard']);
  } 
  reset(){
   this.router.navigate(['/register']);
+
  }
 
 }
