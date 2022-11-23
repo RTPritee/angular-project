@@ -1,6 +1,36 @@
-.form {
- 
-    background-color: #f8f8f8;
-    resize: none;
-
-}
+input[type], select {
+    width: 100%;
+    padding: 10px 8px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button[type=Submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 8px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type=Submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  form {
+    width:600px;
+    margin:0 auto;
+    /* border:1px solid rgb(63, 164, 247); */
+    /* background-color: #53bbeb; */
+            
+  }

@@ -1,3 +1,4 @@
+
 input[type=text], select {
     width: 100%;
     padding: 10px 8px;
@@ -36,4 +37,11 @@ input[type=text], select {
     border-radius: 5px;
     background-color: #ffffff;
     padding: 20px;
+  }
+  form {
+    width:600px;
+    margin:0 auto;
+    /* border:1px solid rgb(63, 164, 247); */
+    /* background-color: #53bbeb; */
+            
   }

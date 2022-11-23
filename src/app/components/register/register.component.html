@@ -1,53 +1,31 @@
 <div class="container">  
-    <div class="card-header">  
-    <h1 style = "text-align: center;">{{topic}}</h1>
-    </div>  
-    <div class="card-body">  
-    <form class ="form">  
-    <div>  
+     <h1 style = "text-align: center;">{{topic}}</h1>
+    <form class ="form" (submit)="registerSubmit()">  
     <label for="FirstName">First Name 
         <label style="color: red;">*</label>
     </label>  
-    <div>  
-    <input type="text" name="FirstName" required >  
-    </div>  
-    </div>  
-    <div>  
+    <input type="text" name="FirstName" required >   
+    
     <label for="LastName">Last Name</label>  <label style="color: red;">*</label> 
-    <div>  
-    <input type="text" name = "LastName" required >  
-
-    </div>  
-    </div>  
-    <div>  
-    <label for="Mobile">Mobile</label>   <label style="color: red;">*</label> 
-    <div>  
-    <input type="text" name="Mobile" required>  
-
-    </div>  
-    </div>  
-    <div>  
+    <input type="text" name = "LastName" required >    
+     
+    <label for="Mobile">Mobile</label>   <label style="color: red;">*</label>   
+    <input type="text" name="Mobile" required>
+     
         <label for="Location">Location</label>  
-        <div>  
-        <input type="location" name="location" > 
-        </div>  
-    </div>  
-    <div>  
+        <input type="location" name="location" >   
+    
         <label for="email">Email</label>    <label style="color: red;">*</label>
-        <div>  
         <input type="text" name="email" required type ="email"> 
-        </div>  
-    </div>  
-    <div>  
+    
     <label for="password">Password</label>  <label style="color: red;">*</label> 
-    <div>  
+      
     <input type="password" name="password" pattern="(?=^.{6,12}$)(?=.*\d)(?=.*[a-z])[a-zA-Z0-9 _-]*$" required> 
-    </div>  
-    </div>  
-    <button  type="submit">Submit</button>  
+     
+     
+    <button  type="Submit">Submit</button>  
     <span>Already have an account? 
         <a routerLink="/login">Login </a></span>
     </form> 
-    <button (click)="reset()" type="reset">Reset</button>   
+    <!-- <button (click)="reset()" type="reset">Reset</button>    -->
     </div>  
-    </div> 

@@ -28,11 +28,10 @@ export class RegisterComponent implements OnInit {
   this.Mobile.setValue('');
   this.email.setValue('');
   this.password.setValue('');
-  this.router.navigate(['/dashboard']);
+  this.router.navigate(['/login']);
  } 
- reset(){
-  this.router.navigate(['/register']);
-
- }
+//  reset(){
+//   this.router.navigate(['/register']);
+//  }
 
 }

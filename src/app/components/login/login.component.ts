@@ -50,13 +50,11 @@ export class LoginComponent implements OnInit {
     })
 
     if(isValid){
-      console.log('Authenticated')
+      alert('Authenticated')
+      this.router.navigate(['/dashboard']);
     }else{
-      console.log('Authentication failed')
+      alert('Authentication failed')
     }
-
-
-
 
     // this.name.setValue('');    
     // this.email.setValue('');
@@ -92,23 +90,6 @@ export class LoginComponent implements OnInit {
     //   error: (error) => {                              //error() callback
     //     error.alert("Something went wrong")
     //   }
-    // })
-
-    // this.http.get<any>("http://localhost:4200/loginUserlist").subscribe(
-    //   res=>{
-    //     const user = res.find((a:any)=>{
-    //       return a.email === this.loginUserList.value.email && a.password === this.loginUserList.value.password
-    //     });
-    //     if(user){
-    //       alert('Login Successful');
-    //       this.router.navigate(['/dashboard']);
-    //     }
-    //     else {
-    //       alert("User not found")
-    //     }
-    //   }  
-    // ,err=>{
-    //   alert("Something went wrong")
     // })
   }
   formSubmit() {
