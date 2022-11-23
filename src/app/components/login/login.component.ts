@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
 import { Router, NavigationExtras } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    private auth: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -29,32 +31,34 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  submit() {
+   submit() {
 
-    const loginUserList = [
-      {
-        "email": "pritee593@gmail.com",
-        "password": "12345Abcde@@"
-      }
-    ]
+    
 
-    var inputEmail = this.logInForm.get('email')?.value;
-    var inputPassword = this.logInForm.get('password')?.value;
-    let isValid = false;
-    loginUserList.forEach(item=>{
-      if(item.email==inputEmail){
-        if(item.password==inputPassword){
-          isValid = true;
-        }
-      }
-    })
+  //   const loginUserList = [
+  //     {
+  //       "email": "pritee593@gmail.com",
+  //       "password": "12345Abcde@@"
+  //     }
+  //   ]
 
-    if(isValid){
-      alert('Authenticated')
-      this.router.navigate(['/dashboard']);
-    }else{
-      alert('Authentication failed')
-    }
+  //   var inputEmail = this.logInForm.get('email')?.value;
+  //   var inputPassword = this.logInForm.get('password')?.value;
+  //   let isValid = false;
+  //   loginUserList.forEach(item=>{
+  //     if(item.email==inputEmail){
+  //       if(item.password==inputPassword){
+  //         isValid = true;
+  //       }
+  //     }
+  //   })
+
+  //   if(isValid){
+  //     alert('Authenticated')
+  //     this.router.navigate(['/dashboard']);
+  //   }else{
+  //     alert('Authentication failed')
+  //   }
 
     // this.name.setValue('');    
     // this.email.setValue('');
@@ -93,7 +97,9 @@ export class LoginComponent implements OnInit {
     // })
   }
   formSubmit() {
+
     console.log("pressed!");
+    this.auth.login("pritee","pass")
 
   }
 
