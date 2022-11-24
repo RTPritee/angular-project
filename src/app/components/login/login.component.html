@@ -1,31 +1,42 @@
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>   -->
 <div class="container">
-  <h1 style = "text-align: center;">
-    User login
-  </h1>  
+  <h1 style="text-align: center">User login</h1>
   <!-- <form (submit)="submit()" [formGroup]="logInForm" ng-app="myApp" ng-controller="validateCtrl" 
   name="myForm" novalidate> -->
-  
-    <form (submit)="submit()" [formGroup]="logInForm">
-      
+
+  <form (submit)="submit()" [formGroup]="logInForm">
     <label for="email">Email</label>
-    <input formControlName="email" type="text" id="email" name="Email" placeholder="Your mail address.." required>
-    
+    <input
+      formControlName="email"
+      type="text"
+      id="email"
+      name="Email"
+      #email
+      placeholder="Your mail address.."
+      required
+    />
+
     <!-- <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid"></span>
     <span ng-show="myForm.email.$error.required">Email is required.</span>
     <span ng-show="myForm.email.$error.email">Invalid email address.</span> -->
 
-
+    <!-- #password, #email manually value pass inspite of using ngmodel -->
     <label for="password">Password</label>
-    <input formControlName="password" type ="password" id ="password" name="Password" placeholder="*********" required >
-    
-    <input type="Submit"  (click)="formSubmit()">
+    <input
+      formControlName="password"
+      type="password"
+      id="password"
+      #password 
+      name="Password"
+      placeholder="*********"
+      required
+    />
+
+    <!-- <input type="Submit"  (click)="formSubmit()"> -->
     <!-- <button (click)="formSubmit()"></button> -->
-   
-      <span>Don't have any account? 
-        <a routerLink="/register"> Sign Up </a></span>
-    
+    <input type="Submit" (click)="login(email.value, password.value)" />
+
+    <span>Don't have any account? <a routerLink="/register"> Sign Up </a></span>
   </form>
   <!-- <button (click)="formSubmit()">test</button> -->
 </div>
-

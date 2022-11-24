@@ -30,11 +30,12 @@ export class LoginComponent implements OnInit {
       password: ['']
     })
   }
+  
+  login(email: any, password: any) {
+    this.auth.login(email, password);
+  }
 
    submit() {
-
-    
-
   //   const loginUserList = [
   //     {
   //       "email": "pritee593@gmail.com",
@@ -96,11 +97,11 @@ export class LoginComponent implements OnInit {
     //   }
     // })
   }
-  formSubmit() {
+  // formSubmit() {
 
-    console.log("pressed!");
-    this.auth.login("pritee","pass")
+  //   console.log("pressed!");
+  //   this.auth.login("pritee","pass")
 
-  }
+  // }
 
 }
